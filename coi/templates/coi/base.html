@@ -20,7 +20,13 @@
       <h1 class="coi__results__term">Results for {{ q }}</h1>
       <ul class="coi__results__list">
         {% for result in results %}
-          <li class="coi__results__list-item">{{ result.author_name }}, {{ result.conflict }}</li>
+        <li class="coi__results__list-item">
+          <strong>Author:</strong> {{ result.author_name }}<br>
+          <strong>Author affiliation:</strong> {{ result.author_affiliation }}<br>
+          <strong>Paper:</strong> {{ result.paper_title }}<br>
+          <strong>Paper date:</strong> {{ result.paper_date }}<br>
+          <strong>Conflict:</strong> {{ result.conflict }}
+        </li>
         {% endfor %}
       </ul>
     </section>
