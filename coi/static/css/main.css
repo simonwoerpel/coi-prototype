@@ -1,3 +1,147 @@
 body {
-  background: green;
+	background-color: #fffff;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	border: 2vw solid #f5f5f5;
+
 }
+
+header {
+}
+
+.page{
+	margin-top: 5em;
+	margin-left: 5em;
+}
+
+
+h1{
+	font-size: 50px;
+	line-height: 0.3;
+
+}
+
+
+.hero{
+	margin-bottom: 4em;
+}
+
+.button {
+    width: 60%;
+    padding: 15px 20px;
+    margin: 8px -7px 0 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #FF0058;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 0 0 3em 0;
+    cursor: pointer;
+    font-size: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF0058;
+}
+
+
+
+
+	button:hover {
+  		background-color: #0014DB; /* Green */
+    	border-style: solid;
+    	border-width: 1px;
+    	border-color: #0014DB;
+    	transition-duration: 0.6s;
+		}
+
+ul{
+	width:70%;
+	padding-bottom: 6em;
+}
+
+
+
+footer {   
+    animation: colorchange 25s infinite;
+   -webkit-animation: colorchange 25s infinite;
+    padding: 6em 2em;
+    margin:0 0;
+    letterspacing: 0.2;
+}
+
+.callout__claim{
+	float: right;
+	font-size: 14px;
+	font-style: italic;
+	padding: 5px 0;
+}
+
+
+
+
+/* Schnickschnack */
+
+
+ @keyframes colorchange{
+  0% {background: #FDCEDB;}
+15% {background: #FDCDF8;}
+30% {background: #E6D5FF;}
+45% {background: #D5E9FF;}
+60% {background: #B3FFE3;}
+75% {background: #C8E7AC;}
+90% {background: #FFF2BE;}
+100% {background: #FDCEDB;}
+}
+
+ @-webkit-keyframes colorchange{
+ 	0% {background: #FDCEDB;}
+15% {background: #FDCDF8;}
+30% {background: #E6D5FF;}
+45% {background: #D5E9FF;}
+60% {background: #B3FFE3;}
+75% {background: #C8E7AC;}
+90% {background: #FFF2BE;}
+100% {background: #FDCEDB;}
+}
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+   
+
+
