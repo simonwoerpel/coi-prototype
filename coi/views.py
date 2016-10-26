@@ -9,6 +9,6 @@ def search(request):
     if q:
         qs = Record.objects.filter(
             Q(author_name__icontains=q) | Q(conflict__icontains=q)
-        ).distinct()
+        ).order_by('author_name', '-paper_date')
         return render(request, 'coi/base.html', {'q': q, 'results': qs})
     return render(request, 'coi/base.html')

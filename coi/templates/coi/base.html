@@ -21,14 +21,17 @@
     {% if results %}
     <section class="coi__results">
       <h1 class="coi__results__term">Results for {{ q }}</h1>
-      <ul class="coi__results__list">
-        {% for result in results %}
-        <li class="coi__results__list-item">
-          <strong>Author:</strong> {{ result.author_name }}<br>
-          <strong>Author affiliation:</strong> {{ result.author_affiliation }}<br>
-          <strong>Paper:</strong> {{ result.paper_title }}<br>
-          <strong>Paper date:</strong> {{ result.paper_date }}<br>
-          <strong>Conflict:</strong> {{ result.conflict }}
+      {% regroup results by author_name as author_list %}
+      <ul class="coi__results__author-list">
+        {% for author in author_list %}
+        <li class="coi__results__author-list__item">{{ author.grouper }}
+          {% for conflict in author.list %}
+          <ul class="coi__results__conflict-list">
+            <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
+            <li class="coi__results__conflict-list__conflict">{{ conflict.conflict }}</li>
+            <li class="coi__results__conflict-list__title">{{ conflict.paper_title }}</li>
+          </ul>
+          {% endfor %}
         </li>
         {% endfor %}
       </ul>
