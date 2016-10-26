@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Conflict of Interests Database</title>
+  </head>
+  <body class="coi">
+    <header class="coi__header">
+
+    </header>
+    <section class="coi__search-form">
+      <form method="get" target="/">
+        <input type="text" name="q" placeholder="Search for person or organization">
+        <input type="submit" value="search">
+      </form>
+    </section>
+    {% if results %}
+    <section class="coi__results">
+      <h1 class="coi__results__term">Results for {{ q }}</h1>
+      <ul class="coi__results__list">
+        {% for result in results %}
+          <li class="coi__results__list-item">{{ result.author_name }}, {{ result.conflict }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </body>
+</html>
