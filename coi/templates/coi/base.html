@@ -10,17 +10,23 @@
   </head>
   <body class="coi">
     <header class="coi__header">
-
     </header>
+
+  <main class="page">
+    <div class="hero">
+      <h1>Conflict Of Interest</h1>
+      <h2>A dataset for...</h2>
+    </div>
+
     <section class="coi__search-form">
       <form method="get" target="/">
-        <input type="text" name="q" placeholder="Search for person or organization">
+        <input class="button" type="text" name="q" placeholder="Search for person or organization">
         <input type="submit" value="search">
       </form>
     </section>
     {% if results %}
     <section class="coi__results">
-      <h1 class="coi__results__term">Results for {{ q }}</h1>
+      <h2 class="coi__results__term">📑 Results for {{ q }} </h2>
       <ul class="coi__results__list">
         {% for result in results %}
         <li class="coi__results__list-item">
@@ -34,5 +40,10 @@
       </ul>
     </section>
     {% endif %}
+    </main>
   </body>
+  <footer>
+  created by Correctiv
+      <p class="callout_claim">Wir decken Missstände auf. Wir sind unabhängig und nicht gewinnorientiert.</p>
+  </footer>
 </html>
