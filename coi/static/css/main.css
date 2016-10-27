@@ -5,7 +5,6 @@ body {
 	line-height: 1.5;
 	margin: 0;
 	border: 2vw solid #f5f5f5;
-
 }
 
 header {
@@ -20,16 +19,30 @@ header {
 h1{
 	font-size: 50px;
 	line-height: 0.3;
-
 }
 
+h2{
+    font-size:30px;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: -1em;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .hero{
 	margin-bottom: 4em;
 }
 
 .button {
-    width: 60%;
+    width: 52%;
     padding: 15px 20px;
     margin: 8px -7px 0 0;
     box-sizing: border-box;
@@ -40,7 +53,7 @@ input[type=button], input[type=submit], input[type=reset] {
     background-color: #FF0058;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 16px 25px;
     text-decoration: none;
     margin: 0 0 3em 0;
     cursor: pointer;
@@ -53,7 +66,9 @@ input[type=button], input[type=submit], input[type=reset] {
     border-color: #FF0058;
 }
 
-
+    input:focus{
+        border-style: none;
+    }
 
 
 	button:hover {
@@ -65,53 +80,99 @@ input[type=button], input[type=submit], input[type=reset] {
 		}
 
 ul{
-	width:70%;
-	padding-bottom: 6em;
+	width: 75%;
+	padding: 0 0 3em 0;
 }
 
+li{
+    list-style: none;  
+}
+
+.coi__results__conflict-list{
+    padding: 2em;
+    font-size: 20px; 
+    font-weight: normal;
+    margin-top: 2em;
+    background-color: #f5f5f5;
+
+}
+
+.coi__results__author-list__item{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 3em 0 0 0;
+
+}
+
+.coi__results__conflict-list__conflict{
+    font-weight: bold;
+    }
+
+
+.coi__results__conflict-list__title{
+    padding-top: 0.8em;
+}
+
+.coi__results__conflict-list__date{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
+    padding-bottom: 1.3em;
+    font-size: 14px;
+}
+
+span{
+    font-weight: bold;
+}
 
 
 footer {   
     animation: colorchange 25s infinite;
    -webkit-animation: colorchange 25s infinite;
     padding: 6em 2em;
-    margin:0 0;
+    margin: 7em 0 0 0;
     letterspacing: 0.2;
 }
 
-.callout__claim{
+.callout_claim{
+    font-family: Georgia, serif;
 	float: right;
-	font-size: 14px;
+	font-size: 30px;
 	font-style: italic;
-	padding: 5px 0;
+    width: 50%;
+    text-align: right;
+    margin: -5em 0 4em 0;
 }
 
 
+
+.footer_brand {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    }
 
 
 /* Schnickschnack */
 
 
  @keyframes colorchange{
-  0% {background: #FDCEDB;}
-15% {background: #FDCDF8;}
-30% {background: #E6D5FF;}
-45% {background: #D5E9FF;}
-60% {background: #B3FFE3;}
-75% {background: #C8E7AC;}
-90% {background: #FFF2BE;}
-100% {background: #FDCEDB;}
+    0% {background: #E6FFAE;}
+20% {background: #BBFFAE;}
+40% {background: #AEFFEE;}
+60% {background: #AEC7FF;}
+80% {background: #BCAEFF;}
+100% {background: #E6FFAE;}
 }
 
+
  @-webkit-keyframes colorchange{
- 	0% {background: #FDCEDB;}
-15% {background: #FDCDF8;}
-30% {background: #E6D5FF;}
-45% {background: #D5E9FF;}
-60% {background: #B3FFE3;}
-75% {background: #C8E7AC;}
-90% {background: #FFF2BE;}
-100% {background: #FDCEDB;}
+ 	0% {background: #E6FFAE;}
+20% {background: #BBFFAE;}
+40% {background: #AEFFEE;}
+60% {background: #AEC7FF;}
+80% {background: #BCAEFF;}
+100% {background: #E6FFAE;}
 }
 
 
