@@ -14,8 +14,10 @@
 
   <main class="page">
     <div class="hero">
-      <h1>Conflict Of Interest</h1>
-      <h2>A dataset for...</h2>
+      <a href="/">
+        <h1>The conflict of interest resolver</h1>
+      </a>
+      <h2>Making conflicts of interest transparent</h2>
     </div>
 
     <section class="coi__search-form">
@@ -35,20 +37,37 @@
           <ul class="coi__results__conflict-list">
             <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
             <li class="coi__results__conflict-list__conflict">{{ conflict.conflict|hilight:q|safe }}</li>
-            <li class="coi__results__conflict-list__title"><span>Paper:</span> {{ conflict.paper_title }}</li>
+            <li class="coi__results__conflict-list__title"><span>Paper:</span> {{ conflict.paper_title }}<a href="https://www.correctiv.org"> → </a></li>
           </ul>
           {% endfor %}
         </li>
         {% endfor %}
       </ul>
     </section>
+
+    {% else %}
+        {% if q %}
+      <div class="coi_noresults">
+        <h2>Sorry. No results for <span class="hilight">{{ q }} </span>. Let's try »Bayer«</h2>
+        <iframe src="//giphy.com/embed/26BRzJmX5rH5Jbzuo" width="600" height="336" frameBorder="0" class="giphy-embed"></iframe><p><a href="http://giphy.com/gifs/colbertlateshow-stephen-colbert-sorry-late-show-26BRzJmX5rH5Jbzuo"></a></p>
+      </div>
+
+
+          {% else %}
+      <div class="coi_noresults">
+        <h2>Which organization has paid which scientist? Try searching <a href="/?q=Monsanto">»Monsanto«.</a> or <a href="/?q=Alexander+Ehrmann">»Alexander Ehrmann«.</a></h2>
+      </div>
+
+
+      {% endif %}
     {% endif %}
+
+
     </main>
   </body>
   <footer>
    <a class="footer_brand" href="https://www.correctiv.org">
       <img src="/static/img/correctiv_logo_reduced.svg" alt="Correctiv">
     </a>
-    <p class="callout_claim">Wir decken Missstände auf. Wir sind unabhängig und nicht gewinnorientiert.</p>
   </footer>
 </html>
