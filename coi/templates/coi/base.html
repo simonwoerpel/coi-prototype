@@ -26,11 +26,11 @@
     </section>
     {% if results %}
     <section class="coi__results">
-      <h3 class="coi__results__term"> Results for <span style="background-color:yellow;">{{ q }} </span></h3>
+      <h3 class="coi__results__term"> Results for <span class="hilight">{{ q }} </span></h3>
       {% regroup results by author_name as author_list %}
       <ul class="coi__results__author-list">
         {% for author in author_list %}
-        <li class="coi__results__author-list__item">{{ author.grouper }}
+        <li class="coi__results__author-list__item">{{ author.grouper|hilight:q|safe }}
           {% for conflict in author.list %}
           <ul class="coi__results__conflict-list">
             <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
