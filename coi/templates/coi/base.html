@@ -37,7 +37,7 @@
           <ul class="coi__results__conflict-list">
             <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
             <li class="coi__results__conflict-list__conflict">{{ conflict.conflict|hilight:q|safe }}</li>
-            <li class="coi__results__conflict-list__title"><span>Paper:</span> {{ conflict.paper_title }}<a href="https://www.correctiv.org"> → </a></li>
+            <li class="coi__results__conflict-list__title"><span>Paper:</span> {{ conflict.paper_title }}<a href="{{ conflict.paper_url }}"> → </a></li>
           </ul>
           {% endfor %}
         </li>
