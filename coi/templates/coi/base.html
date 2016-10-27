@@ -26,7 +26,7 @@
     </section>
     {% if results %}
     <section class="coi__results">
-      <h2 class="coi__results__term">📑 Results for {{ q }} </h2>
+      <h3 class="coi__results__term"> Results for <span style="background-color:yellow;">{{ q }} </span></h3>
       {% regroup results by author_name as author_list %}
       <ul class="coi__results__author-list">
         {% for author in author_list %}
@@ -35,7 +35,7 @@
           <ul class="coi__results__conflict-list">
             <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
             <li class="coi__results__conflict-list__conflict">{{ conflict.conflict|hilight:q|safe }}</li>
-            <li class="coi__results__conflict-list__title">{{ conflict.paper_title }}</li>
+            <li class="coi__results__conflict-list__title"><span>Paper:</span> {{ conflict.paper_title }}</li>
           </ul>
           {% endfor %}
         </li>
@@ -46,7 +46,9 @@
     </main>
   </body>
   <footer>
-  created by Correctiv
-      <p class="callout_claim">Wir decken Missstände auf. Wir sind unabhängig und nicht gewinnorientiert.</p>
+   <a class="footer_brand" href="https://www.correctiv.org">
+      <img src="/static/img/correctiv_logo_reduced.svg" alt="Correctiv">
+    </a>
+    <p class="callout_claim">Wir decken Missstände auf. Wir sind unabhängig und nicht gewinnorientiert.</p>
   </footer>
 </html>
