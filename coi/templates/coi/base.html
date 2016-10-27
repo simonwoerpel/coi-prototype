@@ -1,4 +1,4 @@
-{% load static %}
+{% load static hilight %}
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,7 @@
           {% for conflict in author.list %}
           <ul class="coi__results__conflict-list">
             <li class="coi__results__conflict-list__date">{{ conflict.paper_date }}</li>
-            <li class="coi__results__conflict-list__conflict">{{ conflict.conflict }}</li>
+            <li class="coi__results__conflict-list__conflict">{{ conflict.conflict|hilight:q|safe }}</li>
             <li class="coi__results__conflict-list__title">{{ conflict.paper_title }}</li>
           </ul>
           {% endfor %}
