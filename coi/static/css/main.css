@@ -186,6 +186,7 @@ footer {
 .footer_brand {
   display: block;
   width: 100%;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -247,7 +248,7 @@ footer {
 
 
 @media screen and (max-width: 568px) {
-    
+
     .page{
       margin: 2em;
     }
